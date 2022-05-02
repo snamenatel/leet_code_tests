@@ -1,1 +1,1 @@
-Решение задач (LeetCode)[https://leetcode.com/] в (codesandbox)[https://codesandbox.io/]
+Решение задач [LeetCode](https://leetcode.com/) в [codesandbox](https://codesandbox.io/)
