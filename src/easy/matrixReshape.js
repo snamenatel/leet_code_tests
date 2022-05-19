@@ -1,20 +1,16 @@
 var matrixReshape = function (mat, r, c) {
-  let flat = mat.flat();
-  let cnt = Math.floor( flat.length / c);
-  console.log(cnt);
-  let res = Array(r).fill([]);
-  let n = 0
-  flat.forEach((element, idx) => {    
-      if(n < cnt) {
-        res[n].push(element);
-      }
-      
-      n++;
-      if(n === (cnt)) {
-          n = 0;
-      }
-  });
+  const flat = mat.flat();
+  const res = [];
+  let idx = 0;
+  if(r * c !== flat.length) {
+    return mat;
+  }
+  for(let i = 0; i < r; i++) {
+    res[i] = [];
+    for(let j = 0; j < c; j++) {
+      res[i][j] = flat[idx];
+      idx++
+    }
+  }
   return res;
 };
-
-console.log(matrixReshape([[1, 2], [3, 4]], 2, 4));
